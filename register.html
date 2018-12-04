@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hanlo: Register</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./css/semantic/semantic.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/register.css" />
+    <script src="./css/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script
+      src="./css/semantic/semantic.min.js"
+      type="text/javascript"
+    ></script>
+  </head>
+
+  <body class="ui basic segment" style="margin: 0;">
+    <div class="ui dimmer"><div class="ui loader"></div></div>
+
+    <div class="ui top fixed stackable huge menu">
+      <a class="item" href="">
+        <i class="paper plane icon"></i>
+        <div class="header">Register</div>
+      </a>
+    </div>
+
+    <div class="content">
+      <form id="form-register" class="ui form">
+        <div class="required field">
+          <label>Username</label>
+          <input type="text" name="username" placeholder="Username" />
+        </div>
+        <div class="required field">
+          <label>Display Name</label>
+          <input type="text" name="displayName" placeholder="Display" />
+        </div>
+        <div class="required field">
+          <label>Password</label>
+          <input type="password" name="password" placeholder="Password" />
+        </div>
+        <button class="ui button blue fluid" type="submit">Register</button>
+      </form>
+      <a href="register.html">
+        <button
+          id="button-login"
+          class="ui button fluid"
+          style="margin-top: 16px;"
+        >
+          Login
+        </button>
+      </a>
+    </div>
+
+    <div class="ui negative hidden message">
+      <i class="close icon"></i>
+      <div class="header">Can't create new user</div>
+      <p id="error-message">Test</p>
+    </div>
+  </body>
+
+  <script src="./js/register.js" type="text/javascript"></script>
+  <script>
+    Application.init();
+  </script>
+</html>
