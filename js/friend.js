@@ -36,7 +36,7 @@ let Application = {
       async: false,
       success: function(dataObject) {
         content = dataObject;
-        console.log(content);
+        // console.log(content);
       }
     });
   },

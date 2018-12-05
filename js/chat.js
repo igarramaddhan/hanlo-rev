@@ -1,6 +1,6 @@
 let Application = {
   init: () => {
-    Application.getPosts();
+    Application.getFriendList();
     $('#add').click(event => {
       event.preventDefault();
       $('.ui.modal')
@@ -36,9 +36,9 @@ let Application = {
     });
   },
 
-  getPosts: () => {
+  getFriendList: () => {
     const data = $.ajax({
-      url: 'https://api.ynrk.tk/ppk/getAllPost.php',
+      url: 'https://api.ynrk.tk/ppk/getAllFriend.php',
       type: 'get',
       xhrFields: {
         withCredentials: true
@@ -59,12 +59,11 @@ let Application = {
           data.forEach(item => {
             // location.href = `./friendDetail.html?username=${result.username}`;
             $('.ul.list').append(`
-            <a class="ui card fluid" href="/postDetail.html?postId=${item.id}">
+            <a class="ui card fluid" href="/chatDetail.html?userId=${item.id}">
               <div class="content">
                 <div class="header">${item.displayName}</div>
-                <div class="meta">${moment(item.createdAt).fromNow()}</div>
                 <div class="description">
-                  ${item.content}
+                  ${item.username}
                 </div>
               </div>
             </a>
